@@ -22,30 +22,58 @@
     var CONFIG = {"hostname":"microhand.work","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="不忘初心牢记使命">
-<meta property="og:type" content="website">
-<meta property="og:title" content="夕颜の个人博客">
-<meta property="og:url" content="http://microhand.work/index.html">
+  <meta name="description" content="一、JDK的安装此处JDK推荐使用Azul Zulu JDK 8点击前往其官网下载。 下载完成后双击安装出现如下界面：  该界面点Next，  选择安装路径后点Next，此处不推荐安装在C盘，同时路径最好不要包含中文。  该界面点击Install安装。 二、编写工具IDEA的安装网络上常见的java编写ide（即集成编写环境）有两种，一是eclipse，二是IntellJ IDEA，此处更推荐ID">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ZuluJDK 的安装以及 IntellJ IDEA 的安装与使用">
+<meta property="og:url" content="http://microhand.work/2022/02/24/ZuluJDK-%E7%9A%84%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A-IntellJ-IDEA-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="夕颜の个人博客">
-<meta property="og:description" content="不忘初心牢记使命">
+<meta property="og:description" content="一、JDK的安装此处JDK推荐使用Azul Zulu JDK 8点击前往其官网下载。 下载完成后双击安装出现如下界面：  该界面点Next，  选择安装路径后点Next，此处不推荐安装在C盘，同时路径最好不要包含中文。  该界面点击Install安装。 二、编写工具IDEA的安装网络上常见的java编写ide（即集成编写环境）有两种，一是eclipse，二是IntellJ IDEA，此处更推荐ID">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/943e47ab094f19b4774d5bc558bf69efc80816e8">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/5a744c34d6e40979c7f9ccdc129fc328f491ef2a">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/e694c3e51bd522989237a524965cdaceeab2f8a0">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/f58a67198fb9e9aabe5434dfc79c911d690abbe2">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/4f63bc02c91555b01a5004983baa7f1fd3121899">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/de940a623c1d93d33eab36ce574edcf5fd998778">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/e86d893f0e3857b9816a2b776df35c90470df7dd">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/bf2eecc5a3da81cea7eb9ee7f3450ea016fd4289">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/3b267aab78cd2dd3c02372efb79ae5a3b41eff94">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/9701c77863290a9d93b77ac639a879b74d1312ea">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/17a52f0d0bfd707b70e1213f143432876cb0651f">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/2bf932d3c51d04b65d3ed9b42e9c0842d9e3d654">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/bbbea9f43ef2f78b499f87425101cedf20e66683">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/c5a20f8fda41dc971999df8baae6f3c12a67cf97">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/bf068b5f5fdfb6fdef4f2528dfa452ee87c3bd1e">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/f9b6d07b7eb41ecf1009b7623ec0d9bf17400cfa">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/2906bfce47dab62d6e46be6d42c4793aace60e4c">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/8e2d842b8a5a3c9ae9efa85a9363c3b086385f37">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/ddcfc7113b6406b119bf94754bd2b74f66bdcb54">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/cc9ab59c35280a6b41bc9d3d69a5d763ced1890f">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/4909047f59b4773837e98504c859f32e4662458f">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/e010ccc84d051a5a34b80456bf80a8b025de3820">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/6a64f81dccc0ca38d3b8b70e8f42ad8af2e04e58">
+<meta property="og:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/bcae8f2c80f9ed4e4b2808bf9481ff6b10764898">
+<meta property="article:published_time" content="2022-02-24T04:14:00.000Z">
+<meta property="article:modified_time" content="2022-02-24T04:30:21.064Z">
 <meta property="article:author" content="SanseYooyea 夕颜">
+<meta property="article:tag" content="Java教程">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/943e47ab094f19b4774d5bc558bf69efc80816e8">
 
-<link rel="canonical" href="http://microhand.work/">
+<link rel="canonical" href="http://microhand.work/2022/02/24/ZuluJDK-%E7%9A%84%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A-IntellJ-IDEA-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>夕颜の个人博客</title>
+  <title>ZuluJDK 的安装以及 IntellJ IDEA 的安装与使用 | 夕颜の个人博客</title>
   
 
 
@@ -163,9 +191,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -181,10 +210,9 @@
       <meta itemprop="name" content="夕颜の个人博客">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/02/24/ZuluJDK-%E7%9A%84%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A-IntellJ-IDEA-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">ZuluJDK 的安装以及 IntellJ IDEA 的安装与使用</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          ZuluJDK 的安装以及 IntellJ IDEA 的安装与使用
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -198,6 +226,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
 
         </div>
       </header>
@@ -208,7 +243,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="一、JDK的安装"><a href="#一、JDK的安装" class="headerlink" title="一、JDK的安装"></a>一、JDK的安装</h4><p>此处JDK推荐使用<a target="_blank" rel="noopener" href="https://www.azul.com/downloads/?package=jdk">Azul Zulu JDK 8</a>点击前往其官网下载。</p>
+        <h4 id="一、JDK的安装"><a href="#一、JDK的安装" class="headerlink" title="一、JDK的安装"></a>一、JDK的安装</h4><p>此处JDK推荐使用<a target="_blank" rel="noopener" href="https://www.azul.com/downloads/?package=jdk">Azul Zulu JDK 8</a>点击前往其官网下载。</p>
 <p>下载完成后双击安装出现如下界面：</p>
 <p><img src="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/943e47ab094f19b4774d5bc558bf69efc80816e8" alt="img"></p>
 <p>该界面点Next，</p>
@@ -280,92 +315,50 @@
 <p>6.<strong>CodeGlance3</strong>，显示你的代码缩略图，使结构更加清晰！</p>
 <p><img src="https://www.kdocs.cn/api/v3/office/copy/U3NXWW03cDFqWFBNQkNWL2Q3RHhnVDZEVEZHdGNyOTE2SHM4Q1JTakdrb1c5MnVEZ1JDbVJ1ZmN3K3hva2E2TjJHck9VeEQzVVV0TVF4alg2MWxaOVpkemJTVElRMytSN1RzdDVPNis1RTVuMm14R0QzNkwvd29CUWlNTVY5cnljcEl4bFJXcmJ6SnF5enY5MFhsRTNkVUJ1UWtFTVhRZUFKbkhLYnc5K0xrTHBvdVJRVml5VVpoWjJTdzNnSWtwTkJkd3h1S1g4dXNIeUJWQUtwVT0=/attach/object/bcae8f2c80f9ed4e4b2808bf9481ff6b10764898" alt="img"></p>
 
-      
     </div>
 
     
     
     
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>SanseYooyea 夕颜
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://microhand.work/2022/02/24/ZuluJDK-%E7%9A%84%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A-IntellJ-IDEA-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" title="ZuluJDK 的安装以及 IntellJ IDEA 的安装与使用">http://microhand.work/2022/02/24/ZuluJDK-的安装以及-IntellJ-IDEA-的安装与使用/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/Java%E6%95%99%E7%A8%8B/" rel="tag"># Java教程</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://microhand.work/2022/02/23/hello-world/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="SanseYooyea 夕颜">
-      <meta itemprop="description" content="不忘初心牢记使命">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夕颜の个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/02/23/hello-world/" class="post-title-link" itemprop="url">Hello World - Hexo 博客框架使用教程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-02-23 00:16:19 / 修改时间：20:50:00" itemprop="dateCreated datePublished" datetime="2022-02-23T00:16:19+08:00">2022-02-23</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/02/23/hello-world/" rel="prev" title="Hello World - Hexo 博客框架使用教程">
+      <i class="fa fa-chevron-left"></i> Hello World - Hexo 博客框架使用教程
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -418,6 +411,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81JDK%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">一、JDK的安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%BC%96%E5%86%99%E5%B7%A5%E5%85%B7IDEA%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">二、编写工具IDEA的安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="nav-number">3.</span> <span class="nav-text">三、新建项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%8F%92%E4%BB%B6%E7%9A%84%E6%8E%A8%E8%8D%90%E5%8F%8A%E5%AE%89%E8%A3%85"><span class="nav-number">4.</span> <span class="nav-text">四、插件的推荐及安装</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
