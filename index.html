@@ -194,7 +194,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-03-01 13:43:11 / 修改时间：14:56:09" itemprop="dateCreated datePublished" datetime="2022-03-01T13:43:11+08:00">2022-03-01</time>
+              <time title="创建时间：2022-03-01 13:43:11 / 修改时间：18:02:15" itemprop="dateCreated datePublished" datetime="2022-03-01T13:43:11+08:00">2022-03-01</time>
             </span>
 
           
@@ -225,6 +225,12 @@
 <p>而在面向对象编程中，这些类可以翻译成Bird类，Fish类，也就是类的名称为Bird，Fish。</p>
 <p>大白话来讲就是这么个意思，如果想看更加精准更加科学的解释可以前往<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%B1%BB/6824577?fr=aladdin">百度百科</a>查看。</p>
 <h4 id="对象-x2F-实例"><a href="#对象-x2F-实例" class="headerlink" title="对象&#x2F;实例"></a>对象&#x2F;实例</h4><p>对象是类中的一个概念，比如人类中有一个名为拜登的人类，那这个拜登，就是人类的一个实例，也就是一个对象。</p>
+<h5 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h5><p>每个对象都有一个或多个属性，比如上述所提到的拜登实例，他拥有一个“名字”属性，该属性属性值为拜登。</p>
+<h5 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h5><p>每个对象都可以有一系列的动作，同样拿拜登实例距离，拜登可以当众拉屎，那当众拉屎就是他的一个动作，在Java中称为方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">takeShitInPublic</span><span class="params">()</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="类的基本特性"><a href="#类的基本特性" class="headerlink" title="类的基本特性"></a>类的基本特性</h3><h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><p>在类的概念清楚之后，其实封装也很好理解。</p>
 <p>好比如鸟类，不管是什么鸟，它都有一个名字，所以鸟类下可以有一个属性名为name的属性，在 Java 中表示如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Bird</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
@@ -259,9 +265,14 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Goose</span> <span class="keyword">extends</span> <span class="title class_">Bird</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">swim</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;开始冲浪！(bushi)&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>此时鹅继承了鸟类，但是也有自己独立的动作。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Demo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Goose</span> <span class="variable">goose</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Goose</span>(<span class="string">&quot;鹅&quot;</span>, <span class="literal">false</span>);</span><br><span class="line">        goose.fly();</span><br><span class="line">        goose.swim();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>同样的，更多解释前往<a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=jav430Fw15cE_Lf8ZTyfKA-ef2rLooHxIxoapRkxzisN40_SYg5DNp4EC9NONf4CQw8bq3Hjk6dIWSK3u_4nDOKtFPX3BqYj-1XpBAYOllG&wd=&eqid=dd09a799000a182500000006621dbca7">百度百科</a>查看。</p>
 <h4 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h4><p>同样的接续鸟类的例子，我们都知道不同鸟之间飞行的动作可能不一样，所以如果都写在鸟类的fly方法中，会导致代码非常臃肿庞大。</p>
-<p>为了解决这一问题，面向对象编程有一个极其重要的手段，就是<strong>抽象</strong></p>
+<p>此时有一个方法，就是让继承自鸟类的其余类自己去实现不同的方法，这就是<strong>抽象</strong>，而此时，鸟类就是一个<strong>抽象类</strong>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">Bird</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span> flyAble;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">getFlyAble</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> flyAble;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Bird</span><span class="params">(String name, <span class="type">boolean</span> flyAble)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.flyAble = flyAble;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中属性、函数等都可以一样写在里面。但是继承的类，<strong>必须同样含有这些方法</strong>。</p>
 
       
     </div>
