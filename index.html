@@ -169,6 +169,116 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.microhand.work/2022/03/02/Java-Hello-World/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="SanseYooyea 夕颜">
+      <meta itemprop="description" content="不忘初心牢记使命">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夕颜の个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/02/Java-Hello-World/" class="post-title-link" itemprop="url">Java Hello World!</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-02 18:30:54 / 修改时间：21:49:41" itemprop="dateCreated datePublished" datetime="2022-03-02T18:30:54+08:00">2022-03-02</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在<a href="https://blog.microhand.work/2022/02/24/ZuluJDK-%E7%9A%84%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A-IntellJ-IDEA-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">ZuluJDK-的安装以及-IntellJ-IDEA-的安装与使用</a>一文中，新建项目后，我写下了以下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">GoodGoodStudy</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在开始一步步解析。</p>
+<h4 id="第一行代码"><a href="#第一行代码" class="headerlink" title="第一行代码"></a>第一行代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">GoodGoodStudy</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这一段话的作用是声明了一个类，类名为GoodGoodStudy，<strong>类名必须与文件名一致</strong>。</p>
+<h5 id="class"><a href="#class" class="headerlink" title="class"></a>class</h5><p>在Java中，class是一个<strong>关键字</strong>，用于声明一个类。</p>
+<h5 id="GoodGoodStudy"><a href="#GoodGoodStudy" class="headerlink" title="GoodGoodStudy"></a>GoodGoodStudy</h5><p>GoodGoodStudy为类名，即类的名称，简称为<strong>类名</strong>。此处涉及了类的命名规范，将在下文详细介绍。</p>
+<h6 id="类的命名规范"><a href="#类的命名规范" class="headerlink" title="类的命名规范"></a>类的命名规范</h6><ol>
+<li>类名应当遵循<a target="_blank" rel="noopener" href="https://www.html.cn/qa/javascript/12844.html">大驼峰命名法</a>，即类名中的<strong>每个单词首字母大写</strong>，以方便阅读。</li>
+<li>类名应当体现该类的意义，如程序主入口命名为项目名或Main比较恰当。</li>
+<li>如果是<strong>接口</strong>，则应当在类名前加上大写的I。（接口在后续教程中会讲到，此处只需留有一定印象）。</li>
+</ol>
+<h4 id="第二行代码"><a href="#第二行代码" class="headerlink" title="第二行代码"></a>第二行代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="public"><a href="#public" class="headerlink" title="public"></a>public</h5><p>关于public，实际上可以引出Java中四个<strong>权限修饰符</strong>——private，protected，default，public，这四个权限修饰符同样都是关键字。其中的区别可以看下图。</p>
+<p><img src="https://img-blog.csdn.net/20180625174442539?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d1b2N1bmxlaTI1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"></p>
+<h5 id="static"><a href="#static" class="headerlink" title="static"></a>static</h5><p>此处static同样是关键字，在此处的作用是将main方法声明为<strong>静态方法</strong>。</p>
+<p>静态方法的作用是，哪怕不实例化一个类的对象，也可以直接调用该类的静态方法。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Demo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">printHello</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>而在其他类调用时，可以这么调用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">TestPrintHello</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        Demo.printHello();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但是在<strong>静态方法中不能调用非静态方法或非静态变量</strong>。</p>
+<h5 id="void"><a href="#void" class="headerlink" title="void"></a>void</h5><p>void同样是关键字，用于<strong>声明被声明的方法没有返回值</strong>。即不会返回任何值。</p>
+<h5 id="main"><a href="#main" class="headerlink" title="main"></a>main</h5><p><strong>main不是关键字</strong>，参数为String[] args的main函数为程序主入口，一个类中只有一个入口。</p>
+<p>程序运行时将从main入口开始。</p>
+<h5 id="String-args"><a href="#String-args" class="headerlink" title="String[] args"></a>String[] args</h5><p>String[] args 意思是申明一个名为args的数组，在main函数处，args是该函数的一个参数，当运行程序时，可以附带参数。</p>
+<p>在idea中编译运行时，可以点击图中位置而后点击编辑运行环境(Edit Configurations…)，参数即可在Build and run -&gt; Program arguments中输入。</p>
+<p><img src="https://s2.loli.net/2022/03/02/cYuKqErD3LXvOnQ.png" alt="图片.png"></p>
+<p>如果选择使用cmd运行jar文件，可以使用如下命令:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar xxx.jar arg1 arg2 arg3</span><br></pre></td></tr></table></figure>
+
+<p>此时main方法中的args[1] &#x3D; “arg1”, args[2] &#x3D; “arg2”, args[3] &#x3D; “arg3”。</p>
+<h4 id="第三行代码"><a href="#第三行代码" class="headerlink" title="第三行代码"></a>第三行代码</h4><p>System.out.println();</p>
+<p>System是JDK中自带的一个类，位于java.lang包下，而out则是System类中的一个方法，其doc与声明如下：</p>
+<blockquote>
+<p>The “standard” output stream. This stream is already open and ready to accept output data. Typically this stream corresponds to display output or another output destination specified by the host environment or user.<br>For simple stand-alone Java applications, a typical way to write a line of output data is:<br>           System.out.println(data)</p>
+<p>See the println methods in class PrintStream.<br>See Also:<br>PrintStream.println(), PrintStream.println(boolean), PrintStream.println(char), PrintStream.println(char[]), PrintStream.println(double), PrintStream.println(float), PrintStream.println(int), PrintStream.println(long), PrintStream.println(Object), PrintStream.println(String)</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="type">PrintStream</span> <span class="variable">out</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
+
+<p>其作用是获取一个类型为PrintStream的out对象，而PrintStream类中包含println方法，</p>
+<p>println作用是打印所传的参数，并且换行。</p>
+<blockquote>
+<p>Prints a String and then terminate the line. This method behaves as though it invokes print(String) and then println().<br>Params:<br>x – The String to be printed.</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">println</span><span class="params">(String x)</span> &#123;</span><br><span class="line">	<span class="keyword">synchronized</span> (<span class="built_in">this</span>) &#123;</span><br><span class="line">		print(x);</span><br><span class="line">        newLine();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>有兴趣的可以对底层代码进行更进一步的研究，此处不再赘述。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://blog.microhand.work/2022/03/01/IntellJ-IDEA%E7%9A%84%E6%96%B0%E6%89%8B%E7%99%BE%E9%97%AE%E6%96%A9%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -646,7 +756,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
