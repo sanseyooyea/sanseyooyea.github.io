@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.microhand.work","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="不忘初心牢记使命">
+<meta property="og:type" content="website">
+<meta property="og:title" content="夕颜の个人博客">
+<meta property="og:url" content="https://blog.microhand.work/index.html">
+<meta property="og:site_name" content="夕颜の个人博客">
+<meta property="og:description" content="不忘初心牢记使命">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="SanseYooyea 夕颜">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://blog.microhand.work/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>夕颜の个人博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+      <a target="_blank" rel="noopener" href="https://github.com/sanseyooyea" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">夕颜の个人博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-resources">
+
+    <a href="/resources/" rel="section"><i class="fa fa-download fa-fw"></i>资源</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.microhand.work/2022/03/01/IntellJ-IDEA%E7%9A%84%E6%96%B0%E6%89%8B%E7%99%BE%E9%97%AE%E6%96%A9%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="SanseYooyea 夕颜">
+      <meta itemprop="description" content="不忘初心牢记使命">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夕颜の个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/01/IntellJ-IDEA%E7%9A%84%E6%96%B0%E6%89%8B%E7%99%BE%E9%97%AE%E6%96%A9%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82/" class="post-title-link" itemprop="url">IntellJ IDEA的新手百问斩以及使用细节</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-01 18:23:13 / 修改时间：19:25:58" itemprop="dateCreated datePublished" datetime="2022-03-01T18:23:13+08:00">2022-03-01</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="易发生问题"><a href="#易发生问题" class="headerlink" title="易发生问题"></a>易发生问题</h2><h3 id="刚安装完成但无法新建项目"><a href="#刚安装完成但无法新建项目" class="headerlink" title="刚安装完成但无法新建项目"></a>刚安装完成但无法新建项目</h3><p>这个问题是我于昨天才碰到的，尝试过重启电脑，重装IDEA，都不能解决，但<strong>重装Zulu JDK</strong>后成功解决，原因暂时未知。</p>
+<h3 id="将Java-Class新建于-src-包外"><a href="#将Java-Class新建于-src-包外" class="headerlink" title="将Java Class新建于 src 包外"></a>将Java Class新建于 src 包外</h3><p>这个问题有多个人发生，将Java Class新建在了src包外面，其实按照我之前发的教程截图一步步走是不会这样的😣</p>
+<p>这边先解释一下src是什么意思，src是 <strong>source code</strong> 的缩写，source code 意思是<strong>源代码</strong>，所以按道理你应该<strong>将你的源代码放在src包内</strong>。</p>
+<h3 id="怎么保存写好的代码"><a href="#怎么保存写好的代码" class="headerlink" title="怎么保存写好的代码"></a>怎么保存写好的代码</h3><p>IDEA是现代高级编程工具，有<strong>自动保存</strong>功能，直接关闭就可以保存！</p>
+<h3 id="怎么打开写好的项目"><a href="#怎么打开写好的项目" class="headerlink" title="怎么打开写好的项目"></a>怎么打开写好的项目</h3><p>点击idea的启动器，而<strong>不是</strong>去双击打开.java文件！这样打开是处于light edit模式！</p>
+<h3 id="关于付费版IDEA"><a href="#关于付费版IDEA" class="headerlink" title="关于付费版IDEA"></a>关于付费版IDEA</h3><p>付费版IDEA有两种方式可以长期免费使用。</p>
+<ol>
+<li>使用 edu 邮箱去<a target="_blank" rel="noopener" href="https://www.jetbrains.com/shop/eform/students">JetBrains官网</a>申请，需要经过约莫几天至半个月的审核。部分edu邮箱可能被判无法使用，需要使用学信网学籍辅助证明。</li>
+<li>使用IDEA的破解插件，无限期重置试用时间，该教程博客不详细写了，放个<a target="_blank" rel="noopener" href="https://www.cnblogs.com/DoNetCShap/p/15168536.html">链接</a>自己研究</li>
+</ol>
+<h2 id="使用细节"><a href="#使用细节" class="headerlink" title="使用细节"></a>使用细节</h2><h3 id="快速导包"><a href="#快速导包" class="headerlink" title="快速导包"></a>快速导包</h3><p>今天有许多人写代码时用到了Scanner，但写下去以后显示报错，这是因为没有import导包的原因，这里讲个快捷键用于快速导包：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br></pre></td></tr></table></figure>
+
+<p>此处报错时将鼠标点击Scanner，然后按下 <strong>Alt</strong> 与 <strong>Enter(回车键)</strong> 即可快速导包。</p>
+<h3 id="快速运行"><a href="#快速运行" class="headerlink" title="快速运行"></a>快速运行</h3><p>运行不用每次都点击菜单上的Run -&gt; Run，可以尝试<strong>快捷键Shift + F10</strong></p>
+<h3 id="断点调试"><a href="#断点调试" class="headerlink" title="断点调试"></a>断点调试</h3><p><img src="https://s2.loli.net/2022/03/01/ywErdGACWNQFuBT.png" alt="图片.png"></p>
+<p>点击<strong>左侧非数字处</strong>即可打上断点，Debug快捷键为<strong>Shift + F9</strong>，开启调试模式后可按快捷键 <strong>F8</strong> 进行单步调试。</p>
+<p>调试过程中，可以看到运行过的地方的每一个变量值。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.microhand.work/2022/03/01/%E4%B8%AA%E4%BA%BA%E5%85%B3%E4%BA%8E%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="SanseYooyea 夕颜">
+      <meta itemprop="description" content="不忘初心牢记使命">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夕颜の个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/01/%E4%B8%AA%E4%BA%BA%E5%85%B3%E4%BA%8E%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3/" class="post-title-link" itemprop="url">个人关于面向对象的概念理解</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-01 13:43:11 / 修改时间：18:24:30" itemprop="dateCreated datePublished" datetime="2022-03-01T13:43:11+08:00">2022-03-01</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="类的概念理解"><a href="#类的概念理解" class="headerlink" title="类的概念理解"></a>类的概念理解</h3><p>类是面向对象编程中一个极其重要的核心概念，可以说面向对象编程的一切操作，都是围绕类进行的。</p>
+<p>所以想学好面向对象编程，一定要先理解类的概念。</p>
+<h4 id="从中文词语上理解类"><a href="#从中文词语上理解类" class="headerlink" title="从中文词语上理解类"></a>从中文词语上理解类</h4><blockquote>
+<pre><code>1.许多相似或相同事物的综合：种～。分～。同～。
+
+2.用于性质或特征相同或相似的事物：分成几～。两～性质的问题。
+
+3.类似：～人猿。～新星。画虎不成反～狗。
+
+4.姓。
+</code></pre>
+</blockquote>
+<p>上文来自于百度百科中对类的解释，不难得见类是指有相似处的一些物品。</p>
+<p>使用该意义的类进行组词，比如：鸟类，鱼类等等，这些词语都是<strong>对一个群体的抽象概括</strong>。</p>
+<p>而在面向对象编程中，这些类可以翻译成Bird类，Fish类，也就是类的名称为Bird，Fish。</p>
+<p>大白话来讲就是这么个意思，如果想看更加精准更加科学的解释可以前往<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%B1%BB/6824577?fr=aladdin">百度百科</a>查看。</p>
+<h4 id="对象-x2F-实例"><a href="#对象-x2F-实例" class="headerlink" title="对象&#x2F;实例"></a>对象&#x2F;实例</h4><p>对象是类中的一个概念，比如人类中有一个名为拜登的人类，那这个拜登，就是人类的一个实例，也就是一个对象。</p>
+<h5 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h5><p>每个对象都有一个或多个属性，比如上述所提到的拜登实例，他拥有一个“名字”属性，该属性属性值为拜登。</p>
+<h5 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h5><p>每个对象都可以有一系列的动作，同样拿拜登实例距离，拜登可以当众拉屎，那当众拉屎就是他的一个动作，在Java中称为方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">takeShitInPublic</span><span class="params">()</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="类的基本特性"><a href="#类的基本特性" class="headerlink" title="类的基本特性"></a>类的基本特性</h3><h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><p>在类的概念清楚之后，其实封装也很好理解。</p>
+<p>好比如鸟类，不管是什么鸟，它都有一个名字，所以鸟类下可以有一个属性名为name的属性，在 Java 中表示如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Bird</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+
+<p>而鸟也有能飞或者不能飞两种，所以需要一个flyAble属性，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Bird</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span> flyAble;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因为申明为private，类中需要向外界提供public的getter，并且需要一个构造方法（构造方法就是当实例化该类的一个对象时调用的方法）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Bird</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span> flyAble;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">getFlyAble</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> flyAble;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Bird</span><span class="params">(String name, <span class="type">boolean</span> flyAble)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.flyAble = flyAble;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>而如果他能飞，我们需要给他一个飞这个动作的实现，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Bird</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span> flyAble;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">getFlyAble</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> flyAble;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Bird</span><span class="params">(String name, <span class="type">boolean</span> flyAble)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.flyAble = flyAble;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">fly</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (flyable) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;起飞！&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;我不能飞！www！&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>而外界代码想要调用Bird类时，都必须先实例化一个Bird类的对象：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Demo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Bird</span> <span class="variable">e</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Bird</span>(<span class="string">&quot;鹅&quot;</span>, <span class="literal">false</span>);</span><br><span class="line">        e.fly();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当上述过程完善后，形成了一个较为完整的类。</p>
+<p>而外界想要取得Bird类一个对象的name和flyAble的值，或是想要该对象fly时，则只能通过实例化Bird类的对象进行get，而不是直接使用Bird.name获取或是Bird.fly()飞行，防止外部的随意调用产生问题。</p>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><p>先抛开继承这个词不谈，我们接续上文关于类的理解，从这个方向来理解继承。</p>
+<p>生物圈里有三个大类，一是动物类，而是微生物类，三是植物类。</p>
+<p>而动物类又包含许多种类的动物，如鱼类，鸟类。即鱼类和鸟类都属于动物类。</p>
+<p>而在面向对象编程中，我们把这个从属关系，叫做<strong>继承关系</strong>。</p>
+<p>比如在封装中提到的鸟类与鹅，如果我们新建一个鹅类，他需要继承自鸟类。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Goose</span> <span class="keyword">extends</span> <span class="title class_">Bird</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此时Goose类就拥有了Bird类有的所有属性和方法，即 name , flyAble , fly()</p>
+<p>但是鹅是会游泳的，所以这里我们需要另写一个方法 swim()</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Goose</span> <span class="keyword">extends</span> <span class="title class_">Bird</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">swim</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;开始冲浪！(bushi)&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此时鹅继承了鸟类，但是也有自己独立的动作。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Demo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Goose</span> <span class="variable">goose</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Goose</span>(<span class="string">&quot;鹅&quot;</span>, <span class="literal">false</span>);</span><br><span class="line">        goose.fly();</span><br><span class="line">        goose.swim();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>同样的，更多解释前往<a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=jav430Fw15cE_Lf8ZTyfKA-ef2rLooHxIxoapRkxzisN40_SYg5DNp4EC9NONf4CQw8bq3Hjk6dIWSK3u_4nDOKtFPX3BqYj-1XpBAYOllG&wd=&eqid=dd09a799000a182500000006621dbca7">百度百科</a>查看。</p>
+<h4 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h4><p>同样的接续鸟类的例子，我们都知道不同鸟之间飞行的动作可能不一样，所以如果都写在鸟类的fly方法中，会导致代码非常臃肿庞大。</p>
+<p>此时有一个方法，就是让继承自鸟类的其余类自己去实现不同的方法，这就是<strong>抽象</strong>，而此时，鸟类就是一个<strong>抽象类</strong>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">Bird</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span> flyAble;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">getFlyAble</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> flyAble;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Bird</span><span class="params">(String name, <span class="type">boolean</span> flyAble)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.flyAble = flyAble;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中属性、函数等都可以一样写在里面。但是继承的类，<strong>必须同样含有这些方法</strong>。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.microhand.work/2022/02/24/ZuluJDK-%E7%9A%84%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A-IntellJ-IDEA-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="SanseYooyea 夕颜">
+      <meta itemprop="description" content="不忘初心牢记使命">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夕颜の个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/24/ZuluJDK-%E7%9A%84%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A-IntellJ-IDEA-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">ZuluJDK 的安装以及 IntellJ IDEA 的安装与使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-24 12:14:00 / 修改时间：13:44:05" itemprop="dateCreated datePublished" datetime="2022-02-24T12:14:00+08:00">2022-02-24</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="一、JDK的安装"><a href="#一、JDK的安装" class="headerlink" title="一、JDK的安装"></a>一、JDK的安装</h4><p>此处JDK推荐使用<a target="_blank" rel="noopener" href="https://www.azul.com/downloads/?package=jdk">Azul Zulu JDK 8</a>点击前往其官网下载。</p>
+<p>下载完成后双击安装出现如下界面：</p>
+<p><img src="https://s2.loli.net/2022/02/24/hrpAWltbH1Ji4Z8.png" alt="图片.png"></p>
+<p>该界面点Next，</p>
+<p><img src="https://s2.loli.net/2022/02/24/CGwbtmnoxQ3LPKr.png" alt="图片.png"></p>
+<p>选择安装路径后点Next，<strong>此处不推荐安装在C盘，同时路径最好不要包含中文。</strong></p>
+<p><img src="https://s2.loli.net/2022/02/24/scjq5ReIAzNBGvK.png" alt="图片.png"></p>
+<p>该界面点击Install安装。</p>
+<h4 id="二、编写工具IDEA的安装"><a href="#二、编写工具IDEA的安装" class="headerlink" title="二、编写工具IDEA的安装"></a>二、编写工具IDEA的安装</h4><p>网络上常见的java编写ide（即集成编写环境）有两种，一是eclipse，二是IntellJ IDEA，此处更推荐IDEA，IDEA是目前社区内最受好评的编写环境。故此处选择IDEA安装，如果选择eclipse，需要自行配置JDK环境，配置教程自行百度，此处不另附。</p>
+<p>（此处IDEA安装为社区免费版，付费版可通过使用edu邮箱进行申请，或则通过插件破解以免费使用，具体步骤另附（咕咕咕））</p>
+<p>Windows用户点击前往下载<a target="_blank" rel="noopener" href="https://www.jetbrains.com/idea/download/#section=windows">IDEA社区版</a></p>
+<p>苹果MacOS用户点击前往下载<a target="_blank" rel="noopener" href="https://www.jetbrains.com/idea/download/#section=mac">IDEA社区版</a></p>
+<p>下载完成后双击安装出现如下界面：</p>
+<p><img src="https://s2.loli.net/2022/02/24/sVQkW16RdxIBAat.png" alt="图片.png"></p>
+<p>点击Next</p>
+<p><img src="https://s2.loli.net/2022/02/24/EP512m9LRgIjYZS.png" alt="图片.png"></p>
+<p>选择安装路径后点击Next，<strong>此处不推荐安装在C盘，同时路径最好不要包含中文。</strong></p>
+<p><img src="https://s2.loli.net/2022/02/24/Y1DG4rc9wORhK8l.png" alt="图片.png"></p>
+<ul>
+<li><p>第一个意思是快捷方式</p>
+</li>
+<li><p>第二个是加到开始菜单栏里</p>
+</li>
+<li><p>第三个最好全√就对了</p>
+</li>
+<li><p>右边是设置环境变量，需重启生效，√不√看你心情</p>
+</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/02/24/rUzFq39CaA4y2hI.png" alt="图片.png"></p>
+<p>直接点Install。</p>
+<h4 id="三、新建项目"><a href="#三、新建项目" class="headerlink" title="三、新建项目"></a>三、新建项目</h4><p><img src="https://s2.loli.net/2022/02/24/7ZKRqLHVBQ6w1ok.png" alt="图片.png"></p>
+<p>点击New Project</p>
+<p><img src="https://s2.loli.net/2022/02/24/qrZaBXCJ4Ulxme1.png" alt="图片.png"></p>
+<p>SDK一般会自动检测出来，若没检测需要手动选择第一步中安装的JDK。</p>
+<p>这里不需要勾选，直接点击Next</p>
+<p><img src="https://s2.loli.net/2022/02/24/emVa3pOqubwALfh.png" alt="图片.png"></p>
+<p>Next</p>
+<p><img src="https://s2.loli.net/2022/02/24/k8BmsQodfwRuZI5.png" alt="图片.png"></p>
+<p>先在Project location中新建好你存项目的文件夹并选中，然后Project name填写你的项目名称，例如Test01,Demo01,Homework01等等。</p>
+<p><strong>请记住此处项目的文件夹可多次使用，即该文件夹中可存放你的多个项目。推荐将你本学期的所有作业放于该文件夹中，这是一个良好的习惯。</strong></p>
+<p>选择完毕后点击Finish。</p>
+<p><img src="https://s2.loli.net/2022/02/24/nFmHUpMjb4f5uhS.png" alt="图片.png"></p>
+<p>进入该页面后，左侧为你的文件夹树，选中src右键New -&gt; Java Class点击</p>
+<p><img src="https://s2.loli.net/2022/02/24/hZmV5FzXJrGgsUb.png" alt="图片.png"></p>
+<p>出现该界面后Name需填写你的类名。<strong>此处插一句嘴，编码规范中要求类名首字母保持大写，若涉及多个单词按如下格式编写，例：GoodGoodStudy。</strong></p>
+<p><img src="https://s2.loli.net/2022/02/24/xG2z4hebMSvWj8p.png" alt="图片.png"></p>
+<p>在该页面中编写你的java程序，例子如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GoodGoodStudy</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/02/24/syC9jlIBWuqExJM.png" alt="图片.png"></p>
+<p>编写完成后点击上方Run -&gt; Run，</p>
+<p><img src="https://s2.loli.net/2022/02/24/ydlLJMOBcGaVIuh.png" alt="图片.png"></p>
+<p>此处即为你的程序运行结果！至此参照给出的例子你已经迈出了Java学习的第一步，HelloWorld！</p>
+<h4 id="四、插件的推荐及安装"><a href="#四、插件的推荐及安装" class="headerlink" title="四、插件的推荐及安装"></a>四、插件的推荐及安装</h4><p>接续上一节的画面，点击左上方的File -&gt; Settings </p>
+<p><img src="https://s2.loli.net/2022/02/24/TkJRgsvMIGCndiV.png" alt="图片.png"></p>
+<p>左侧点击Plugins</p>
+<p><img src="https://s2.loli.net/2022/02/24/abzqw2vlUSEpHOn.png" alt="图片.png"></p>
+<p>上方选择Marketplace，然后在下方搜索栏中可以搜索你想要的插件，插件安装点击其后的Install后等待安装完成即可。</p>
+<p>此处推荐几个插件。</p>
+<p>1.<strong>Chineses(Simplified) Language Pack</strong>，IDEA官方中文汉化包，对英文看不懂的同学友好度极高。安装后需重启</p>
+<p><img src="https://s2.loli.net/2022/02/24/cHf5PFqLSyQDpI3.png" alt="图片.png"></p>
+<p>2.<strong>Material Theme UI</strong>，主题插件，可以让你的编写工具颜值更高（安装以后在Settings中查找Material Theme UI进行设置，推荐Deep Ocean）</p>
+<p><img src="https://s2.loli.net/2022/02/24/4OHTxNfQLPep8kV.png" alt="图片.png"></p>
+<p>3.<strong>Background Image Plus +</strong> ，背景图片插件，选择你的背景图片文件夹，可以让你的编写工具呈现背景图片，写累了还能看看美图！可设置每隔几分钟就更换一张图片。</p>
+<p><img src="https://s2.loli.net/2022/02/24/u3jklwHpTOUv5cE.png" alt="图片.png"></p>
+<p>4.<strong>Rainbow Brackets</strong>，彩虹括号，让你的括号更加清楚显眼，防止因为括号太多而对错了。</p>
+<p><img src="https://s2.loli.net/2022/02/24/5UWSeZCFGNAEy7p.png" alt="图片.png"></p>
+<p>5.<strong>Codota AI Autocomplete for Java and JavaScript</strong>，智能AI代码补全，让你的编码更加轻松容易！</p>
+<p><img src="https://s2.loli.net/2022/02/24/RA37IdYiPryUWmj.png" alt="图片.png"></p>
+<p>6.<strong>CodeGlance3</strong>，显示你的代码缩略图，使结构更加清晰！</p>
+<p><img src="https://s2.loli.net/2022/02/24/dAO9etzUGI6sEJb.png" alt="图片.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.microhand.work/2022/02/23/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="SanseYooyea 夕颜">
+      <meta itemprop="description" content="不忘初心牢记使命">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夕颜の个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/23/hello-world/" class="post-title-link" itemprop="url">Hello World - Hexo 博客框架使用教程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-02-23 00:16:19" itemprop="dateCreated datePublished" datetime="2022-02-23T00:16:19+08:00">2022-02-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-25 12:19:33" itemprop="dateModified" datetime="2022-02-25T12:19:33+08:00">2022-02-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="SanseYooyea 夕颜"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">SanseYooyea 夕颜</p>
+  <div class="site-description" itemprop="description">不忘初心牢记使命</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/sanseyooyea" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;sanseyooyea" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:1187586838@qq.com" title="E-Mail → mailto:1187586838@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SanseYooyea 夕颜</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
