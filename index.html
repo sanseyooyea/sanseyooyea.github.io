@@ -169,6 +169,96 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.microhand.work/2022/03/07/Java-Scanner-%E7%B1%BB%E8%AF%A6%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="SanseYooyea 夕颜">
+      <meta itemprop="description" content="不忘初心牢记使命">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夕颜の个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/07/Java-Scanner-%E7%B1%BB%E8%AF%A6%E8%A7%A3/" class="post-title-link" itemprop="url">Java Scanner 类详解</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-07 18:32:21 / 修改时间：19:28:43" itemprop="dateCreated datePublished" datetime="2022-03-07T18:32:21+08:00">2022-03-07</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>为了更好的人机交互，程序需要接收用户传输的信息并进行处理，Java在控制台中采用了Scanner类以<strong>获取用户输入的信息</strong>。</p>
+<p>Scanner英文直译为扫描器，从中也可以看出其作用。本篇博文将主要介绍Scanner类的常用用法以及特殊细节点并包含少量的底层原理。</p>
+<p>需要自行查看底层代码时可翻阅之前我发布的<a href="https://blog.microhand.work/2022/03/01/IntellJ-IDEA%E7%9A%84%E6%96%B0%E6%89%8B%E7%99%BE%E9%97%AE%E6%96%A9%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82/">博文</a>查看如何快速查看申明，此处不再赘述。</p>
+<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><h3 id="实例化"><a href="#实例化" class="headerlink" title="实例化"></a>实例化</h3><blockquote>
+<p>Constructs a new Scanner that produces values scanned from the specified input stream. Bytes from the stream are converted into characters using the underlying platform’s default charset.<br>Params:<br>source – An input stream to be scanned</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="title function_">Scanner</span><span class="params">(InputStream source)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>(<span class="keyword">new</span> <span class="title class_">InputStreamReader</span>(source), WHITESPACE_PATTERN);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是我们最常用的一种构造方法，我们在控制台中想要获取用户输入的信息，通常只需要</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br></pre></td></tr></table></figure>
+
+<p>System类中，in的修饰为static InputStream，因此可以直接通过类.变量方法进行调用，满足Scanner类构建需要的参数。</p>
+<p>当然还有另外几种构建方式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="title function_">Scanner</span><span class="params">(InputStream source, String charsetName)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>(makeReadable(Objects.requireNonNull(source, <span class="string">&quot;source&quot;</span>), toCharset(charsetName)),</span><br><span class="line">             WHITESPACE_PATTERN);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看出此处构造方法比上面一种多了一个参数 String charsetName，用于设置编码，编码种类较多，常用的有ANSI，UTF-8，GBK…以后会专门写一篇博文介绍。如果不填，默认使用UTF-8码。</p>
+<h3 id="方法及使用"><a href="#方法及使用" class="headerlink" title="方法及使用"></a>方法及使用</h3><p>ps.下文标题中的XXX包括了Line，Int，Double等等数据类型。</p>
+<h4 id="hasNextXXX"><a href="#hasNextXXX" class="headerlink" title="hasNextXXX"></a>hasNextXXX</h4><p>作用为判断下一行是否包含对应类型的值，若没有则返回 false，反之返回 true。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">    <span class="keyword">if</span> (scanner.hasNextInt()) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;下一行包含 int 数字&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面一段程序的左右就是检测下一行是否包含 int 型数字，若有则输出”下一行包含 int 数字”。</p>
+<h3 id="nextXXX"><a href="#nextXXX" class="headerlink" title="nextXXX"></a>nextXXX</h3><p>这个方法的作用为获取下一行对应类型的值，比如nextLine，则获取下一行的所有文字并存储为String变量。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">    <span class="keyword">if</span> (scanner.hasNextLine()) &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">inputString</span> <span class="operator">=</span> scanner.nextLine();</span><br><span class="line">        System.out.println(<span class="string">&quot;输入的文字为：&quot;</span> + inputString);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里<u>有细节点需要注意</u>，nextLine是字符串取到\n（\n为换行符）为止，包含\n，而nextInt则不包含\n，所以两者同时调用时，通常会出现一些奇怪的问题，比如，在控制台中输入：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">123</span><br><span class="line">test</span><br></pre></td></tr></table></figure>
+
+<p>而此时通过以下代码去读取：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">    <span class="type">int</span> <span class="variable">inputInt</span> <span class="operator">=</span> scanner,nextInt();</span><br><span class="line">    <span class="type">String</span> <span class="variable">inputString</span> <span class="operator">=</span> scanner.nextLine();</span><br><span class="line">	System.out.println(inputInt + inputString);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出的结果为：123</p>
+<p>具体原因上面已经讲了，没懂可以再看一遍。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://blog.microhand.work/2022/03/02/Java-Hello-World/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -763,7 +853,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
