@@ -169,6 +169,129 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.microhand.work/2022/03/14/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="SanseYooyea 夕颜">
+      <meta itemprop="description" content="不忘初心牢记使命">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夕颜の个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/14/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Java基础语法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-03-14 09:00:20" itemprop="dateCreated datePublished" datetime="2022-03-14T09:00:20+08:00">2022-03-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-28 12:52:21" itemprop="dateModified" datetime="2022-03-28T12:52:21+08:00">2022-03-28</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="if-条件语句"><a href="#if-条件语句" class="headerlink" title="if 条件语句"></a>if 条件语句</h2><h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><p>这个形式的if语句基本形式为</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (expression) &#123;</span><br><span class="line">    <span class="comment">//dosomething</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是最基本的if语句，if后跟一个括号，括号内写一个逻辑表达式，比如 3 + 5 &#x3D;&#x3D; 8</p>
+<p>而当 expression 为 true 时，将执行 {} 内语句。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="number">1</span> + <span class="number">1</span> == <span class="number">2</span>) &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;1 + 1 = 2&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行该程序后，将输出 1 + 1 &#x3D; 2。</p>
+<h3 id="if-else"><a href="#if-else" class="headerlink" title="if - else"></a>if - else</h3><p>这个形式的if语句基本形式为</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (expression) &#123;</span><br><span class="line">    <span class="comment">//do something1</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">//do something2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当 expression 为 true 时，将执行第一个大括号内的语句，否则执行第二个大括号内的语句，例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="number">1</span> + <span class="number">1</span> == <span class="number">23</span>) &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;1 + 1 = 23&quot;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;1 + 1 ≠ 23&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个程序运行后，将输出 1 + 1 ≠ 23</p>
+<h3 id="if-else-if"><a href="#if-else-if" class="headerlink" title="if - else if"></a>if - else if</h3><p>这个形式的if语句基本形式为</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (expression1) &#123;</span><br><span class="line">    <span class="comment">//do something1</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (expression2) &#123;</span><br><span class="line">    <span class="comment">// do something2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当 expression1 为 true 时，将执行第一个大括号内的语句，否则判断 expression2，此时若 expression2 为 true 时，则执行第二个大括号内语句，否则不执行任何语句。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="number">1</span> + <span class="number">1</span> == <span class="number">23</span>) &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;1 + 1 = 23&quot;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="number">1</span> + <span class="number">1</span> == <span class="number">2</span>) &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;1 + 1 = 2&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个程序运行后，将输出 1 + 1 &#x3D; 2</p>
+<h3 id="if-else-if-else"><a href="#if-else-if-else" class="headerlink" title="if - else if - else"></a>if - else if - else</h3><p>这个形式的if语句基本形式为</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (expression1) &#123;</span><br><span class="line">    <span class="comment">//do something1</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (expression2) &#123;</span><br><span class="line">    <span class="comment">// do something2</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// do something3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>与 if - else if 类似，当 expression1 为 true 时，将执行第一个大括号内的语句，否则判断 expression2，此时若 expression2 为 true 时，则执行第二个大括号内语句，不同的是两者都为 false 时将执行第三个大括号内的语句。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="number">1</span> + <span class="number">1</span> == <span class="number">3</span>) &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;1 + 1 = 3&quot;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="number">1</span> + <span class="number">1</span> == <span class="number">4</span>) &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;1 + 1 = 4&quot;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;1 + 1 ≠ 3 且 1 + 1 ≠ 4&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个程序运行后，将输出 1 + 1 ≠ 3 且 1 + 1 ≠ 4。</p>
+<h2 id="select-条件语句"><a href="#select-条件语句" class="headerlink" title="select 条件语句"></a>select 条件语句</h2><p>select语句的基本语法为：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">select (expression) &#123;</span><br><span class="line">    value1:</span><br><span class="line">      <span class="comment">//dosomething1</span></span><br><span class="line">      <span class="comment">//break;</span></span><br><span class="line">    value2:</span><br><span class="line">      <span class="comment">//dosomething2</span></span><br><span class="line">      <span class="comment">//break;</span></span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    valuen:</span><br><span class="line">      <span class="comment">//dosomethingn</span></span><br><span class="line">      <span class="comment">//break;</span></span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="comment">//dosomething</span></span><br><span class="line">      <span class="comment">//break;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>expression部分为需要填写的表达式，而value则是值的意思。即如果 expression &#x3D;&#x3D; valuen ，则程序会运行valuen冒号后的语句，直到break;</p>
+<p>此处需要多注意的是，若没有break，程序在运行valuen的语句后，会继续运行valuen后续的值，比如value1没有break;则会继续执行value2中的语句，直到遇到break;或则执行完所有语句。而default的意思是，若判断完所有的值没有满足条件的，则会运行default中的语句。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">height</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>().nextInt();</span><br><span class="line">select (height) &#123;</span><br><span class="line">    <span class="number">1</span>:</span><br><span class="line">      System.out.println(<span class="string">&quot;有一米高！&quot;</span>)</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="number">2</span>:</span><br><span class="line">      System.out.println(<span class="string">&quot;有两米高！&quot;</span>)</span><br><span class="line">    <span class="number">3</span>:</span><br><span class="line">      System.out.println(<span class="string">&quot;有三米高！&quot;</span>)</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      System.out.println(<span class="string">&quot;比三米高！&quot;</span>)</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行程序，输入1，则输出 有一米高！</p>
+<p>输入2，则会输出 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">有两米高！</span><br><span class="line">有三米高！</span><br></pre></td></tr></table></figure>
+
+<p>输入4，则会输出 比三米高！</p>
+<h2 id="for-循环语句"><a href="#for-循环语句" class="headerlink" title="for 循环语句"></a>for 循环语句</h2><p>for 语句的基本语法为：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (循环前语句;循环条件;循环末尾语句) &#123;</span><br><span class="line">    <span class="comment">//dosomething</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>循环前语句</p>
+<p>循环前语句的意思就是，进入循环前，执行的语句。在其中定义的变量，其作用域仅局限于循环内。</p>
+</li>
+<li><p>循环条件</p>
+<p>循环条件用于判断是否执行循环，若不满足条件则会退出循环。</p>
+</li>
+<li><p>循环末尾语句</p>
+<p>循环末尾语句，当一次循环体内的 dosomething执行完以后，就会执行一次循环末尾语句。</p>
+</li>
+</ul>
+<p>例子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= <span class="number">100</span>; i++) &#123;</span><br><span class="line">    sum += i;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">&quot;1 + 2 + ... + 100 = &quot;</span> + sum);</span><br></pre></td></tr></table></figure>
+
+<p>最终输出结果就是 1 加到 100 的和。</p>
+<h2 id="while-循环语句"><a href="#while-循环语句" class="headerlink" title="while 循环语句"></a>while 循环语句</h2><h3 id="while"><a href="#while" class="headerlink" title="while"></a>while</h3><h3 id="do-while"><a href="#do-while" class="headerlink" title="do while"></a>do while</h3><h3 id="while-do"><a href="#while-do" class="headerlink" title="while do"></a>while do</h3>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://blog.microhand.work/2022/03/07/Java-Scanner-%E7%B1%BB%E8%AF%A6%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,10 +405,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-03-02 18:30:54 / 修改时间：22:24:36" itemprop="dateCreated datePublished" datetime="2022-03-02T18:30:54+08:00">2022-03-02</time>
+              <time title="创建时间：2022-03-02 18:30:54" itemprop="dateCreated datePublished" datetime="2022-03-02T18:30:54+08:00">2022-03-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-08 00:20:04" itemprop="dateModified" datetime="2022-03-08T00:20:04+08:00">2022-03-08</time>
+              </span>
 
           
 
@@ -343,6 +472,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="type">PrintStream</span> <span class="variable">out</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
 
 <p>其作用是获取一个类型为PrintStream的out对象，而PrintStream类中包含println方法，</p>
+<p>java中调用方法有两种方式，一是申明为static的方法可直接通过<strong>类名.方法</strong>调用，二是通过实例化一个类的对象，再使用<strong>对象.方法</strong></p>
 <p>println作用是打印所传的参数，并且换行。</p>
 <blockquote>
 <p>Prints a String and then terminate the line. This method behaves as though it invokes print(String) and then println().<br>Params:<br>x – The String to be printed.</p>
@@ -853,7 +983,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
