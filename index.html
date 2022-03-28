@@ -200,7 +200,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 12:52:21" itemprop="dateModified" datetime="2022-03-28T12:52:21+08:00">2022-03-28</time>
+                <time title="修改时间：2022-03-28 15:21:01" itemprop="dateModified" datetime="2022-03-28T15:21:01+08:00">2022-03-28</time>
               </span>
 
           
@@ -273,7 +273,19 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= <span class="number">100</span>; i++) &#123;</span><br><span class="line">    sum += i;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">&quot;1 + 2 + ... + 100 = &quot;</span> + sum);</span><br></pre></td></tr></table></figure>
 
 <p>最终输出结果就是 1 加到 100 的和。</p>
-<h2 id="while-循环语句"><a href="#while-循环语句" class="headerlink" title="while 循环语句"></a>while 循环语句</h2><h3 id="while"><a href="#while" class="headerlink" title="while"></a>while</h3><h3 id="do-while"><a href="#do-while" class="headerlink" title="do while"></a>do while</h3><h3 id="while-do"><a href="#while-do" class="headerlink" title="while do"></a>while do</h3>
+<h2 id="while-循环语句"><a href="#while-循环语句" class="headerlink" title="while 循环语句"></a>while 循环语句</h2><h3 id="while"><a href="#while" class="headerlink" title="while"></a>while</h3><p>该类型while语句的基本语法如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (expression) &#123;</span><br><span class="line">    <span class="comment">//dosomething</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当 expression 为 true 时，将会执行循环体中的语句&#x2F;&#x2F;dosomething</p>
+<p>例如</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt;= <span class="number">100</span>) &#123;</span><br><span class="line">    sum += i;</span><br><span class="line">    i++;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">&quot;1 + 2 + ... + 100 = &quot;</span> + sum);</span><br></pre></td></tr></table></figure>
+
+<p>最终输出结果就是 1 加到 100 的和。</p>
+<h3 id="do-while"><a href="#do-while" class="headerlink" title="do while"></a>do while</h3><p>该类型的while语句基本语法如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">    <span class="comment">//dosomething</span></span><br><span class="line">&#125; <span class="keyword">while</span> (expression)</span><br></pre></td></tr></table></figure>
+
+<p>与上一类型不同的是，该类型 while 语句是先执行循环体内的内容，再判断一次 expression 是否需要执行下一次循环。</p>
+
       
     </div>
 
