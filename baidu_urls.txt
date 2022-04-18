@@ -1,5 +1,5 @@
+https://blog.microhand.work/2022/04/18/Java%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B/
 https://blog.microhand.work/2022/03/28/Java%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/
 https://blog.microhand.work/2022/03/14/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/
 https://blog.microhand.work/2022/03/07/Java-Scanner-%E7%B1%BB%E8%AF%A6%E8%A7%A3/
 https://blog.microhand.work/2022/03/02/Java-Hello-World/
-https://blog.microhand.work/2022/03/01/IntellJ-IDEA%E7%9A%84%E6%96%B0%E6%89%8B%E7%99%BE%E9%97%AE%E6%96%A9%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82/
